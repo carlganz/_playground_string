@@ -9,3 +9,9 @@ SEXP gostring(){
   UNPROTECT(1) ;
   return s ;
 }
+
+SEXP nbytes( SEXP x ){
+  const char* s = CHAR(STRING_ELT(x, 0)) ;
+  int n = Nbytes(s) ;
+  return Rf_ScalarInteger(n) ;
+}
