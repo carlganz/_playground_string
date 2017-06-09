@@ -2,8 +2,8 @@
 #'
 #' @useDynLib gostring
 #' @export
-gostring <- function() {
-  .Call("gostring", PACKAGE = "gostring")
+foobar <- function() {
+  .Call("foobar", PACKAGE = "gostring")
 }
 
 #' @export
