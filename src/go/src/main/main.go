@@ -9,8 +9,8 @@ func Foobar() string {
 }
 
 //export Nbytes
-func Nbytes(s *C.char) int {
-  return rstring.Nbytes(C.GoString(s)) ;
+func Nbytes(s string) int {
+  return rstring.Nbytes(s) ;
 }
 
 func main() {}

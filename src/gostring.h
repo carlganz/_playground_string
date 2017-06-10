@@ -55,7 +55,7 @@ extern "C" {
 
 extern GoString Foobar();
 
-extern GoInt Nbytes(char* p0);
+extern GoInt Nbytes(GoString p0);
 
 #ifdef __cplusplus
 }
