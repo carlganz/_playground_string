@@ -11,5 +11,5 @@ SEXP foobar(){
 SEXP nbytes(SEXP x){
   SEXP sx = STRING_ELT(x, 0);
   GoString gos = { (char*) CHAR(sx), SHORT_VEC_LENGTH(sx) };
-  return ScalarInteger(Nbytes( gos )) ;
+  return ScalarInteger( Nbytes(gos) ) ;
 }

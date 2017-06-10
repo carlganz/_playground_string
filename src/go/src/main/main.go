@@ -9,7 +9,7 @@ func Foobar() string {
 }
 
 //export Nbytes
-func Nbytes(s string) int {
+func Nbytes(s string ) int {
   return rstring.Nbytes(s) ;
 }
 
