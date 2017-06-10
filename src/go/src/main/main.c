@@ -3,15 +3,12 @@
 #include "_cgo_export.h"
 
 SEXP foobar(){
-  SEXP s = PROTECT(Rf_allocVector(STRSXP, 1)) ;
   GoString res = Foobar() ;
-  SET_STRING_ELT(s, 0, Rf_mkCharLen( res.p, res.n )) ;
-  UNPROTECT(1) ;
-  return s ;
+  return ScalarString(mkCharLenCE( res.p, res.n, CE_UTF8 )) ;
 }
 
 SEXP nbytes(SEXP x){
   char* s = (char*) CHAR(STRING_ELT(x, 0)) ;
   int n = Nbytes(s) ;
-  return Rf_ScalarInteger(n) ;
+  return ScalarInteger(n) ;
 }
